@@ -7,7 +7,7 @@ if (process.argv[2] == "-h") {
   (async () => {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
-    await page.goto("https://www." + process.argv[3]);
+    await page.goto(process.argv[3]);
     await page.screenshot({
       path: 'example.png'
     });
